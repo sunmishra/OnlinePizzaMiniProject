@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  <display-name>pizza_mini_project_mvc</display-name>
+  <welcome-file-list>
+    <welcome-file>default.jsp</welcome-file><!-- always provide only one default page which get loads on starting of app and it shouldn't contain any spring tags it should be plain html -->
+  </welcome-file-list>
+  
+  <servlet><!-- Configuring Servlet -->
+  	<servlet-name>spring5</servlet-name>
+  	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+  	<load-on-startup>1</load-on-startup><!-- ensures application starts with FC, do not wait for first req -->  
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>spring5</servlet-name>
+  	<url-pattern>/</url-pattern><!-- all req go via/ -->
+  </servlet-mapping>
+</web-app>
